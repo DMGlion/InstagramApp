@@ -7,7 +7,7 @@
            <img src="https://instagram.fdub3-1.fna.fbcdn.net/vp/e8c5c6ddae53e75a134bd93e201d0e36/5E038B38/t51.2885-19/s150x150/22709172_932712323559405_7810049005848625152_n.jpg?_nc_ht=instagram.fdub3-1.fna.fbcdn.net" class="rounded-circle">
        </div>
        <div class="col-9 pt-5">
-            <div><h1>clone of Insta</h1></div>
+            <div><h1>{{ $user->username }}</h1></div>
             <div class="d-flex">
                 <div class="pr-5"><strong>153</strong> posts</div>
                 <div class="pr-5"><strong>23k</strong> followers</div>
