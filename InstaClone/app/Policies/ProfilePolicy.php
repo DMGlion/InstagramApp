@@ -9,7 +9,7 @@ use Illuminate\Auth\Access\HandlesAuthorization;
 class ProfilePolicy
 {
     use HandlesAuthorization;
-    
+
     /**
      * Determine whether the user can view any profiles.
      *
@@ -53,7 +53,8 @@ class ProfilePolicy
      */
     public function update(User $user, Profile $profile)
     {
-        //
+        //Validate profile for update
+        return $user->id == $profile->user_id;
     }
 
     /**
