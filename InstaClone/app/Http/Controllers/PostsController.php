@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Intervention\Image\Facades\Image;
 
 class PostsController extends Controller
 {
@@ -28,6 +29,11 @@ class PostsController extends Controller
         //Create the post
         //request image saved stor ein file uploads and the driver to store our file s3(amazon s3) but in our case we have only our local storage which is public
         $imagePath = (request('image')->store('uploads', 'public'));
+
+        //resize image
+        $image = Image::make(public_path("storage/{$imagePath}"))->fit(1200, 1200);
+        $image->save();
+
         //go to auth user get theirs posts and create, on this way it will get the id user
         auth()->user()->posts()->create([
             'caption' => $data['caption'],
