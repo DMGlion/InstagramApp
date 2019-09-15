@@ -1850,7 +1850,9 @@ __webpack_require__.r(__webpack_exports__);
   },
   methods: {
     followUser: function followUser() {
-      alert('Some one is following you');
+      axios.post('/follow/1').then(function (response) {
+        alert(response.data);
+      });
     }
   }
 });
