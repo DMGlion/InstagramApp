@@ -8,7 +8,7 @@
        </div>
        <div class="col-4">
            <div>
-               <h4>{{$post->user->username}}</h4>
+               <h3>{{$post->user->username}}</h3>
                <p>{{$post->caption}}</p>
            </div>
        </div>

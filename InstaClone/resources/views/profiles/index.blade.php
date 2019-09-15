@@ -11,7 +11,7 @@
                 <h1>{{ $user->username }}</h1>
                 <a href="/p/create">Add New Post</a>
             </div>
-           <a href="">Edit profile link</a>
+           <a href="/profile/{{$user->id}}/edit">Edit profile link</a>
             <div class="d-flex">
                 <div class="pr-5"><strong>{{$user->posts->count()}}</strong> posts</div>
                 <div class="pr-5"><strong>23k</strong> followers</div>
