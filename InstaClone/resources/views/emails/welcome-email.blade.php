@@ -1,12 +1,10 @@
 @component('mail::message')
-# Introduction
+# Welcome to InstaClone
 
-The body of your message.
+This is a welcome messagem be free to chat.
 
-@component('mail::button', ['url' => ''])
-Button Text
-@endcomponent
 
-Thanks,<br>
-{{ config('app.name') }}
+
+Thanks, all the best, have fun!!!!<br>
+David
 @endcomponent
